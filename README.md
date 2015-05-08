@@ -51,10 +51,10 @@ Crawler is the service of web crawler.
 -   crawl
 
 ```
-    /service/crawler/crawl
+    /service/crawler/crawl -d crawer_id=<crawler_id>
 ```
 
-The action starts a container using the image `companyservice/crawler` and container starts a crawler with the arguments in the request.
+The action starts a container using the image `companyservice/crawler` and container starts a crawler with the arguments in the request. At the same time, a async listener is created to wait the container and remove the container when the container closed.
 
 # Supported Docker versions
 
